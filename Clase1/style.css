@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    display: flex;
+    flex-flow: row;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #bdc3c7;
+}
+
+#player {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-content: center;
+    width: 80vw;
+    background-color: #34495e;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 90px;
+    border-radius: 8px;
+    padding: 10px;
+    audio {
+        display: none;
+    }
+    .cover {
+        flex: 1;
+        .img {
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+            margin-right: 15px;
+        }
+        .metadata {
+            .a {
+                flex-flow: column;
+                justify-content: center;
+                .title {
+                    font-size: 1.5em;
+                    color: #ecf0f1;
+                }
+                .artist {
+                    font-size: 1em;
+                    color: #bdc3c7;
+                }
+            }
+            .b {
+                flex-flow: column;
+                justify-content: center;
+                .mark {
+                    width: 20px;
+                    height: 20px;
+                    background-color: #2ecc71;
+                    border-radius: 50%;
+                    margin-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    line-height: 20px;
+                    font-size: 10px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    .controls {
+        flex: 1;
+        flex-flow: row;
+        justify-content: center;
+        align-content: center;
+        .play {
+            width: 60px;
+            height: 60px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: 10px;
+            font-weight: bolder;
+            cursor: pointer;
+            line-height: 60px;
+        }
+    
+    }
+}
+
+#player:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 15px;
+}

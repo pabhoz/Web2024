@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="player">
+        <audio src="./music/galicia.mp3" controls></audio>
+        <div class="cover">
+            <div class="img"></div>
+            <div class="metadata">
+                <div class="a">
+                    <div class="title">Galicia</div>
+                    <div class="artist">Juan Duque</div>
+                </div>
+                <div class="b">
+                    <div class="mark">√</div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="prev"></div>
+            <div class="play">PLAY</div>
+            <div class="next"></div>
+        </div>
+    </div>
+    <script>
+        const audio = document.querySelector('audio');
+        const play = document.querySelector('.play');
+
+        play.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                play.textContent = 'PAUSE';
+            } else {
+                audio.pause();
+                play.textContent = 'PLAY';
+            }
+        });
+    </script>
+</body>
+</html>
